@@ -1,4 +1,5 @@
 
+
 # PT_PHELPER
 Addon script for Profit Trailer to automatically enable SOM for a specific pair if it goes beyond specified limit
 
@@ -30,5 +31,7 @@ BTC-ZCL_sell_only_mode = true
 Even though it is a very simple script any donations are welcome :)))
 
 BTC: 127vURZ3MwzFCmNLp1TubfGyxU7bb5BwQc
+
 ETH: 0xe254cd63d727ed63eb7e4fa78bf5af8c4f5fe328
+
 LTC: LP4x1TfDe36QcCj7o79Br8mWxTipLNdhY5
