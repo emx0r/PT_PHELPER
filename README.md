@@ -13,7 +13,7 @@ You can avoid buying a pair if it grew or dropped more than x% you specify as a 
 point FILE variable to your PT PAIRS.properties file
 setup a crontab statement to run the script every 5 minutes or so:
 
-**/5     *       *       *       * /var/scripts/pairs_helper.sh 15
++b */5     *       *       *       * /var/scripts/pairs_helper.sh 15
 
 The argument after the script defines the limit beyound which we want to trigger SOM +-15% in this specific example
 
@@ -25,15 +25,15 @@ e.g.
 #PAIRS_HELPER@MK
 #Tue 13 Feb 19:00:01 UTC 2018
 BTC-UCASH_sell_only_mode = true
--42.00% < -15%
+ -42.00% < -15%
 BTC-R_sell_only_mode = true
-23.30% > 15%
+ 23.30% > 15%
 BTC-ZCL_sell_only_mode = true
-28.35% > 15%
+ 28.35% > 15%
 BTC-LINK_sell_only_mode = true
-23.98% > 15%
+ 23.98% > 15%
 BTC-SMART_sell_only_mode = true
--17.54% < -15%
+ -17.54% < -15%
 
 Even though it is a very simple script any donations are welcome :)))
 
