@@ -1,7 +1,7 @@
 
 
 # PT_PHELPER
-Addon script for Profit Trailer to automatically enable SOM for a specific pair if it goes beyond specified limit
+Addon script for Profit Trailer to automatically enable SOM for a specific pair if it goes beyond the user limit
 
 
 This is a very simple Bourne Shell script aimed to help avoiding bags in Profit Trailer.
@@ -18,6 +18,10 @@ setup a crontab statement to run the script every 5 minutes or so:
 */5     *       *       *       * /var/scripts/pairs_helper.sh 15
 
 The argument after the script defines the limit beyound which we want to trigger SOM +-15% in this specific example
+
+### Requirements:
+
+Bourne Shell & curl
 
 #### Result:
 The PT_PHELPER modifies your active PAIR.properties file changing all affected coins to SOM.
