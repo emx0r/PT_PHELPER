@@ -28,6 +28,8 @@ BTC-UCASH_sell_only_mode = true
 
 BTC-ZCL_sell_only_mode = true
 
+##########################################################################
+
 Even though it is a very simple script any donations are welcome :)))
 
 BTC: 127vURZ3MwzFCmNLp1TubfGyxU7bb5BwQc
