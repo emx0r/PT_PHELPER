@@ -13,7 +13,7 @@ You can avoid buying a pair if it grew or dropped more than x% you specify as a 
 point FILE variable to your PT PAIRS.properties file
 setup a crontab statement to run the script every 5 minutes or so:
 
-*/5     *       *       *       * /var/scripts/pairs_helper.sh 15
+**/5     *       *       *       * /var/scripts/pairs_helper.sh 15
 
 The argument after the script defines the limit beyound which we want to trigger SOM +-15% in this specific example
 
@@ -35,5 +35,5 @@ BTC-LINK_sell_only_mode = true
 BTC-SMART_sell_only_mode = true
 -17.54% < -15%
 
-Even though itS a very simple script any donations are welcome :)))
+Even though it is a very simple script any donations are welcome :)))
 
