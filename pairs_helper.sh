@@ -55,11 +55,13 @@ writeSOM()
 exchange=$1  #PASS BITTREX, BINANCE, POLONIEX
 limit=$2     #PASS % LIMIT TO PUT A PAIR INTO SOM; 0 DISABLES THIS FUNCTION
 altSOM=$3    #PASS % FOR AVERAGE OF TOP 10 ALTCOINS WHEN TO ENABLE GLOBAL SOM; 0 DISABLES THIS FUNCTION
+market=BTC   # by default we trade BTC, change if needed
+file=PAIRS.properties #put the path to your PAIRS.properties file
 
 dt=`date`
 
-file=PAIRS.properties
-market=BTC
+
+
 
 
 list=`curl --silent https://api.coinmarketcap.com/v1/ticker/ | grep -e symbol -e percent_change_24h | cut -f4 -d'"' | xargs -n 2 | awk '{ print $1":"$2 }'`
