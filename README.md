@@ -44,9 +44,8 @@ The PT_PHELPER modifies your active PAIR.properties file changing all affected c
 
 e.g.
 
-BTC-UCASH_sell_only_mode = true
 
-BTC-ZCL_sell_only_mode = true
+![Alt text](PAIRS.png?raw=true "PAIRS")
 
 ##########################################################################
 
