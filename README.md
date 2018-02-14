@@ -2,7 +2,7 @@
 
 # PT_PHELPER
 Addon script for Profit Trailer to automatically enable SOM for a specific pair if it goes beyond the user limit
-The script can also enable global SOM in percentage average for TOP 10 market cap altcoins exceeds the limit
+The script can also enable global SOM if average percentage for TOP 10 market cap altcoins exceeds the limit
 
 This is a very simple Bourne Shell script aimed to help avoiding bags in Profit Trailer.
 It scans % difference for last 24 hours of all coins and if the percentage has crossed the limit, the PT_PHELPER
