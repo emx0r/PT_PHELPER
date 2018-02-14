@@ -29,7 +29,7 @@ There are 3 arguments:
 
 1) exchange:   BITTREX / BINANCE / POLONIEX
 2) coin SOM:   threshold to enable coin specific SOM in % (counted as change within 24h)
-3) global SOM: threshold to enable global SOM if Top10 ALTs corss the avergae limit (within 24 hours) 
+3) global SOM: threshold to enable global SOM if Top10 ALTs cross the average limit (within 24 hours) 
 
 You can disable either 2) or 3) or both by specifying 0
 
