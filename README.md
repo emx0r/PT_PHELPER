@@ -18,7 +18,7 @@ for percentage change of TOP 10 marketcap altcoins.
 1) Enable coin-specific SOM is it crosses user limit
 2) Enable global SOM if Top10 marketcap ALTs cross the user limit
 
-### Instructions:
+### Instructions
 
 point FILE variable to your PT PAIRS.properties file
 setup a crontab statement to run the script every 5 minutes or so:
@@ -39,6 +39,7 @@ Bourne Shell & curl
 
 #### Result
 The PT_PHELPER modifies your active PAIR.properties file changing all affected coins to SOM.
+
 (it is recommended you do a backup of your PAIRS.properties file)
 
 e.g.
