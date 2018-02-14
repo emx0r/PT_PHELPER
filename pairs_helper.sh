@@ -69,8 +69,8 @@ btcPct=`curl --silent https://api.coinmarketcap.com/v1/ticker/bitcoin/ | grep pe
 altPct=`curl --silent https://api.coinmarketcap.com/v1/ticker/ | grep -e symbol -e percent_change_24h | cut -f4 -d'"' | xargs -n 2 | awk '{ print $1":"$2 }' | grep -v $market | head -n 10 | cut -f2 -d":"`
 
 
-`sed -i '/#PAIRS_HELPER@MK/,$d' $file`
-echo "#PAIRS_HELPER@MK" >> $file
+`sed -i '/#PT_PHELPER@MK/,$d' $file`
+echo "#PT_PHELPER@MK" >> $file
 echo "# $dt" >> $file
 for i in $list 
 do
