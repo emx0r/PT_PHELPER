@@ -33,6 +33,9 @@ There are 3 arguments:
 
 You can disable either 2) or 3) or both by specifying 0
 
+**! Never put your custom PAIR.properties settings below "PT_PHELPER@MK" string. It is an eyecatcher used by the script to
+find the location where to write the data !**
+
 ### Requirements
 
 Bourne Shell & curl
