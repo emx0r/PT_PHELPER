@@ -15,8 +15,8 @@ for percentage change of TOP 10 marketcap altcoins.
 
 ### Features
 
-1) Enable coin-specific SOM is it crosses user limit
-2) Enable global SOM if Top10 marketcap ALTs cross the user limit
+1) Enable coin-specific SOM if it crosses user limit (% in 24h)
+2) Enable global SOM if Top10 marketcap ALTs cross the user limit (avg % in 24h)
 
 ### Instructions
 
