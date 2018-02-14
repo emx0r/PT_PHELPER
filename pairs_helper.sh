@@ -52,11 +52,11 @@ writeSOM()
 
 ####MAIN PART####
 
-exchange=$1  #PASS BITTREX, BINANCE, POLONIEX
-limit=$2     #PASS % LIMIT TO PUT A PAIR INTO SOM; 0 DISABLES THIS FUNCTION
-altSOM=$3    #PASS % FOR AVERAGE OF TOP 10 ALTCOINS WHEN TO ENABLE GLOBAL SOM; 0 DISABLES THIS FUNCTION
-market=BTC   # by default we trade BTC, change if needed
-file=PAIRS.properties #put the path to your PAIRS.properties file
+exchange=$1  		#PASS BITTREX, BINANCE, POLONIEX (read directly from argument)
+limit=$2     		#PASS % LIMIT TO PUT A PAIR INTO SOM; 0 DISABLES THIS FUNCTION (read directly from argument)
+altSOM=$3    		#PASS % FOR AVERAGE OF TOP 10 ALTCOINS WHEN TO ENABLE GLOBAL SOM; 0 DISABLES THIS FUNCTION (read directly from argument)
+market=BTC   		# by default we trade BTC, change if needed
+file=PAIRS.properties	#put the path to your PAIRS.properties file
 
 dt=`date`
 
@@ -74,7 +74,7 @@ echo "#PT_PHELPER@MK" >> $file
 echo "# $dt" >> $file
 for i in $list 
 do
-		coin=`echo $i | cut -f1 -d':'`;
+	coin=`echo $i | cut -f1 -d':'`;
         pct=`echo $i | cut -f2 -d':'`;
         diffPct=`echo "$pct - $btcPct" | bc`;
 
