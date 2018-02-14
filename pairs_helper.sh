@@ -30,7 +30,7 @@
 
 writePair()
 {
-	a=$1
+    a=$1
     b=$2
     o=$3
     case `echo "a=$a;b=$b;r=-1;if(a==b)r=0;if(a"$o"b)r=1;r"|bc` in
