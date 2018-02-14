@@ -10,7 +10,7 @@
 # 
 # Instructions
 #
-# Let the script run from cron, passing your echange and limits as 
+# Let the script run from cron, passing your exchange and limits as 
 # parameters.
 # 
 # 1. parm: BITTREX / BINANCE / POLONIEX
