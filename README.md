@@ -23,7 +23,7 @@ for percentage change of TOP 10 marketcap altcoins.
 point FILE variable to your PT PAIRS.properties file
 setup a crontab statement to run the script every 5 minutes or so:
 
-*/5     *       *       *       * /var/scripts/pairs_helper.sh BITTREX 15 15
+`*/5     *       *       *       * /var/scripts/pairs_helper.sh BITTREX 15 15`
 
 There are 3 arguments:
 
