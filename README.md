@@ -15,8 +15,8 @@ for percentage change of TOP 10 marketcap altcoins.
 
 ### Features
 
-1) Enable coin-specific SOM if it crosses user limit (% in 24h)
-2) Enable global SOM if Top10 marketcap ALTs cross the user limit (avg % in 24h)
+- 1\) Enable coin-specific SOM if it crosses user limit (% in 24h)
+- 2\) Enable global SOM if Top10 marketcap ALTs cross the user limit (avg % in 24h)
 
 ### Instructions
 
@@ -27,9 +27,9 @@ setup a crontab statement to run the script every 5 minutes or so:
 
 There are 3 arguments:
 
-1) exchange:   BITTREX / BINANCE / POLONIEX
-2) coin SOM:   threshold to enable coin specific SOM in % (counted as change within 24h)
-3) global SOM: threshold to enable global SOM if Top10 ALTs cross the average limit (within 24 hours) 
+- 1\) exchange:   BITTREX / BINANCE / POLONIEX
+- 2\) coin SOM:   threshold to enable coin specific SOM in % (counted as change within 24h)
+- 3\) global SOM: threshold to enable global SOM if Top10 ALTs cross the average limit (within 24 hours) 
 
 You can disable either 2) or 3) or both by specifying 0
 
