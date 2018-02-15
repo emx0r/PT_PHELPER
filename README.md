@@ -42,6 +42,18 @@ You can disable either 2) or 3) or both by specifying 0
 **! Never put your custom PAIR.properties settings below "PT_PHELPER@MK" string. It is an eyecatcher used by the script to
 find the location where to write the data !**
 
+
+**Instructions for pt_phelper.sh script - to use telegram-cli for ignoring newly listed coins on a exchange:**
+
+- Install or compile [telegram-cli](https://github.com/vysheng/tg) for your OS distribution
+- Run the telegram-cli under the user who will run the pt_phelper.sh script and join [Coin listing](https://t.me/coin_listing) channel
+- Update tgPath variable in the script to point to telegram-cli bin
+- when running a script use 4th argument to specify for how many days you want to ignore the coin.
+  0 disables this feature.
+  
+  `*/5     *       *       *       * /var/scripts/pairs_helper.sh BITTREX 15 15 7`
+
+
 ### Requirements
 
 Bourne Shell & curl
