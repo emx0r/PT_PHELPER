@@ -1,7 +1,7 @@
 
 
 # PT_PHELPER
-Addon [script](https://github.com/emx0r/PT_PHELPER/blob/master/pairs_helper.sh) for Profit Trailer to automatically enable SOM for a specific pair if it goes beyond the user limit
+Addon [script](https://github.com/emx0r/PT_PHELPER/blob/master/pairs_helper.sh) for Profit Trailer to automatically enable SOM for a specific pair if it goes beyond the user limit.
 The script can also enable global SOM if average percentage for TOP 10 market cap altcoins exceeds the limit
 
 This is a very simple Bourne Shell script aimed to help avoiding bags in Profit Trailer.
@@ -23,6 +23,7 @@ You find the configuration for pt_phelper.sh in the instructions section.
 
 - 1\) Enable coin-specific SOM if it crosses user limit (% in 24h)
 - 2\) Enable global SOM if Top10 marketcap ALTs cross the user limit (avg % in 24h)
+> 3\) Enable coin-specific SOM for newly listed token on exchange
 
 ### Instructions
 
