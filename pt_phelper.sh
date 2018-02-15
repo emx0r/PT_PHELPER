@@ -175,7 +175,7 @@ echo "#" >> $file
 if [ "$altSOM" != "0" ]; then
  sumAlt=`echo $altPct | tr " " "+"`
  diffAlt=`echo "("$sumAlt")"/10 | bc`
- echo "#GLOBAL ALT SOM - limit +- $altSOM%" >> $file
+ echo "#GLOBAL ALT SOM - limit +- $altSOM% (current average is $diffAlt%)" >> $file
  writeSOM $diffAlt $altSOM ">"
  b=`echo "$altSOM * -1" | bc`
  writeSOM $diffAlt $b "<"
