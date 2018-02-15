@@ -13,6 +13,12 @@ You can avoid buying a pair if it grew or dropped more than x% you specify as a 
 The similar function is also implemented for global SOM, in this case the parameter indicates the limit
 for percentage change of TOP 10 marketcap altcoins.
 
+>There is a new functionality added to enable a SOM for a newly listed coin on an exchange.
+This feature uses Telegram-cli and it is in experimental state. If you wish to use it, please download
+pt_phelper.sh script. If you want to stay with more tested version without this ability, use pairs_helper.sh
+After the pt_phelper is fully tested it is going to replace pairs_helper.
+You find the configuration for pt_phelper.sh in the instructions section.
+
 ### Features
 
 - 1\) Enable coin-specific SOM if it crosses user limit (% in 24h)
