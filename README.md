@@ -51,7 +51,7 @@ find the location where to write the data !**
 - when running a script use 4th argument to specify for how many days you want to ignore the coin.
   0 disables this feature.
   
-  `*/5     *       *       *       * /var/scripts/pairs_helper.sh BITTREX 15 15 7`
+  `*/5     *       *       *       * /var/scripts/pt_phelper.sh BITTREX 15 15 7`
 
 
 ### Requirements
