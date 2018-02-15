@@ -66,7 +66,7 @@ The PT_PHELPER modifies your active PAIR.properties file changing all affected c
 e.g.
 
 
-![Alt text](PAIRS.png?raw=true "PAIRS")
+![Alt text](newCoins.png?raw=true "PAIRS")
 
 ##########################################################################
 
