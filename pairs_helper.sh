@@ -101,7 +101,7 @@ do
 done
    
 if [ "$altSOM" != "0" ]; then
- sumAlt=`echo $altPct | tr " " "+"`
+ sumAlt=`echo $altPct | sed 's/ /- '$btcPct' +/g'`
  diffAlt=`echo "("$sumAlt")"/10 | bc`
  writeSOM $diffAlt $altSOM ">"
  b=`echo "$altSOM * -1" | bc`
