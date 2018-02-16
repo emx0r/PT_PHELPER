@@ -114,6 +114,15 @@ exchangeFormat()
 
 }
 
+checkArg()
+{
+
+   	case $1 in
+    	''|*[!0-9]*) echo "Argument must be a number - verify 2nd, 3rd and 4th option"; exit ;;
+    	*) ;;
+	esac
+
+}
 
 ######### REVIEW / MODIFY OPTIONS BELOW #########
 
@@ -128,6 +137,9 @@ listLimit=200				#HOW MANY COINS YOU WANT TO CHECK - TAKEN FROM MARKETCAP VALUE
 
 ######### END OF USER MODIFICATIONS ############# 
 
+checkArg $limit
+checkArg $altSOM
+checkArg $tg
 
 list=`curl --silent https://api.coinmarketcap.com/v1/ticker/?limit=$listLimit | grep -e symbol -e percent_change_24h | cut -f4 -d'"' | xargs -n 2 | awk '{ print $1":"$2 }'`
 btcPct=`curl --silent https://api.coinmarketcap.com/v1/ticker/bitcoin/ | grep percent_change_24h | cut -f4 -d'"'`
