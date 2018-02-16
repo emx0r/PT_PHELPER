@@ -124,11 +124,12 @@ tg=$4        				#CHECK IF WE WANT TELEGRAM
 tgPath=telegram-cli			#PATH TO TELEGRAM-CLI BINARY
 file=PAIRS.properties			#PATH TO YOUR PAIRS CONFIG
 market=BTC				#MARKET YOU TRADE
+listLimit=200				#HOW MANY COINS YOU WANT TO CHECK - TAKEN FROM MARKETCAP VALUE
 
 ######### END OF USER MODIFICATIONS ############# 
 
 
-list=`curl --silent https://api.coinmarketcap.com/v1/ticker/ | grep -e symbol -e percent_change_24h | cut -f4 -d'"' | xargs -n 2 | awk '{ print $1":"$2 }'`
+list=`curl --silent https://api.coinmarketcap.com/v1/ticker/?limit=$listLimit | grep -e symbol -e percent_change_24h | cut -f4 -d'"' | xargs -n 2 | awk '{ print $1":"$2 }'`
 btcPct=`curl --silent https://api.coinmarketcap.com/v1/ticker/bitcoin/ | grep percent_change_24h | cut -f4 -d'"'`
 altPct=`curl --silent https://api.coinmarketcap.com/v1/ticker/ | grep -e symbol -e percent_change_24h | cut -f4 -d'"' | xargs -n 2 | awk '{ print $1":"$2 }' | grep -v $market | head -n 10 | cut -f2 -d":"`
 dt=`date`
