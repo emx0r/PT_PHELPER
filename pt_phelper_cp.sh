@@ -130,8 +130,8 @@ exchange=$1  								#PASS BITTREX, BINANCE, POLONIEX
 limit=$2     								#PASS % LIMIT TO PUT A PAIR INTO SOM; 0 DISABLES THIS FUNCTION
 altSOM=$3    								#PASS % FOR AVERAGE OF TOP 10 ALTCOINS WHEN TO ENABLE GLOBAL SOM; 0 DISABLES THIS FUNCTION
 tg=$4        								#CHECK IF WE WANT TELEGRAM
-tgPath=/var/scripts/tg/telegram-cli					#PATH TO TELEGRAM-CLI BINARY
-file=/home/pi/ProfitTrailer/trading/PAIRS.properties			#PATH TO YOUR PAIRS CONFIG
+tgPath=telegram-cli							#PATH TO TELEGRAM-CLI BINARY
+file=PAIRS.properties							#PATH TO YOUR PAIRS CONFIG
 market=BTC								#MARKET YOU TRADE
 listLimit=200								#HOW MANY COINS YOU WANT TO CHECK - TAKEN FROM MARKETCAP VALUE
 
