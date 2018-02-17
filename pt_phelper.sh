@@ -158,7 +158,7 @@ fi
 
 `sed -i '/#PT_PHELPER@MK/,$d' $tmpFile`
 echo "#PT_PHELPER@MK" >> $tmpFile
-echo "# $dt" >> $tmpFile
+echo "#LAST UPDATE $dt" >> $tmpFile
 
 if [ "$tg" != "0" ]; then
 
@@ -201,4 +201,10 @@ if [ "$altSOM" != "0" ]; then
  echo "#" >> $tmpFile
 fi
 
-`cp $tmpFile $file`
+hashFile=`cat $file | grep -ve "#LAST UPDATE" -ve "#PT_PHELPER@MK" | openssl dgst -sha256 | cut -f2 -d' '`
+hashTmpFile=`cat $tmpFile | grep -ve "#LAST UPDATE" -ve "#PT_PHELPER@MK" | openssl dgst -sha256 | cut -f2 -d' '`
+
+if [ "$hashFile" != "$hashTmpFile" ]; then
+
+        `cp $tmpFile $file`
+fi
