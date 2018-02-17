@@ -172,7 +172,7 @@ do
 	coin=`echo $i | cut -f1 -d':'`;
         pct=`echo $i  | cut -f2 -d':'`;
 	
-	if [ "$pct" == "@@@" ]; then
+	if [ "$pct" = "@@@" ]; then
                 continue
         fi
 
@@ -192,7 +192,7 @@ done
 echo "#" >> $tmpFile
    
 if [ "$altSOM" != "0" ]; then
- sumAlt=`echo $altPct | tr " " "+"`
+ sumAlt=`echo $altPct | sed s'/ / - '$btcPct' + /g'`
  diffAlt=`echo "("$sumAlt")"/10 | bc`
  echo "#GLOBAL ALT SOM - limit +- $altSOM% (current average is $diffAlt%)" >> $tmpFile
  writeSOM $diffAlt $altSOM ">"
