@@ -141,7 +141,7 @@ checkArg $limit
 checkArg $altSOM
 checkArg $tg
 
-list=`curl --silent https://api.coinmarketcap.com/v1/ticker/?limit=$listLimit | grep -e symbol -e percent_change_24h | cut -f4 -d'"' | xargs -n 2 | awk '{ print $1":"$2 }'`
+list=`curl --silent https://api.coinmarketcap.com/v1/ticker/?limit=$listLimit | grep -e symbol -e percent_change_24h | sed s'/null/"@@@"/g' | cut -f4 -d'"' | xargs -n 2 | awk '{ print $1":"$2 }'`
 btcPct=`curl --silent https://api.coinmarketcap.com/v1/ticker/bitcoin/ | grep percent_change_24h | cut -f4 -d'"'`
 altPct=`curl --silent https://api.coinmarketcap.com/v1/ticker/ | grep -e symbol -e percent_change_24h | cut -f4 -d'"' | xargs -n 2 | awk '{ print $1":"$2 }' | grep -v $market | head -n 10 | cut -f2 -d":"`
 dt=`date`
@@ -170,7 +170,12 @@ echo "#Coin specific SOM - limit +- $limit%" >> $tmpFile
 for i in $list 
 do
 	coin=`echo $i | cut -f1 -d':'`;
-        pct=`echo $i | cut -f2 -d':'`;
+        pct=`echo $i  | cut -f2 -d':'`;
+	
+	if [ "$pct" == "@@@" ]; then
+                continue
+        fi
+
         diffPct=`echo "$pct - $btcPct" | bc`;
 
 	exchangeFormat $exchange $coin $market
