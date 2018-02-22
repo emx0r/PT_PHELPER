@@ -102,7 +102,7 @@ exchangeFormat()
 		market=$3
 
 		case $exchange in
-                BITTREX)  cEx="$market-$coin"
+                BITTREX)  if [ "coin" = "BCH" ]; then  $coin='BCC' ; fi ;  cEx="$market-$coin"
                                    ;;
                 BINANCE)  cEx="$coin"$market
                                    ;;
