@@ -57,7 +57,7 @@ find the location where to write the data !**
 
 ### Requirements
 
-Bourne Shell & curl
+Bourne Shell, curl, bc
 
 #### Result
 The PT_PHELPER modifies your active PAIR.properties file changing all affected coins to SOM.
