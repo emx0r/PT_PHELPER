@@ -47,7 +47,7 @@ find the location where to write the data !**
 
 - Install or compile [telegram-cli](https://github.com/vysheng/tg) for your OS distribution
 
-   (you need following packages or their alternative: libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev    libjansson-dev libpython-dev make)
+   (you need following packages or their alternative:  libreadline-dev libconfig-dev libssl1.0-dev lua5.2 liblua5.2-dev libevent-dev libjansson-dev libpython-dev make)
    
 - Run the telegram-cli under the user who will run the pt_phelper.sh script and join [Coin listing](https://t.me/coin_listing) channel
 - Update tgPath variable in the script to point to telegram-cli bin
